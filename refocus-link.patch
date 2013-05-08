@@ -1,0 +1,12 @@
+diff -aurN refocus-0.9.0.orig/src/Makefile.am refocus-0.9.0/src/Makefile.am
+--- refocus-0.9.0.orig/src/Makefile.am	2013-05-06 13:35:09.209840235 +0200
++++ refocus-0.9.0/src/Makefile.am	2013-05-06 13:35:58.432743920 +0200
+@@ -5,7 +5,7 @@
+ bin_PROGRAMS = refocus
+ noinst_PROGRAMS = test-matrix
+ 
+-ldadd_atlas=-L@LAPACK_LIB_DIR@ -llapack -lcblas -latlas
++ldadd_atlas=-L@LAPACK_LIB_DIR@ -llapack -lcblas -latlas -lm
+ 
+ noinst_HEADERS=bdclosure.h refocus.h matrix.h tilebuf.h conv.h fwlapack.h gimppreview.h prevman.h util.h
+ EXTRA_DIST = dummy-plugin.c
